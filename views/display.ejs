@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div class="container">
+  <table class="table table-striped table-responsive">
+    <thead>
+      <tr>
+        <th>Full URL</th>
+        <th>Short URL</th>
+        <th>Clicks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% shortUrls.forEach(short => { %>
+        <tr>
+          <td>
+            <a href="<%= short.full%>">"<%= short.full%>"</a>
+          </td>
+          <td>
+            <a href="<%=short.short%>"><%=short.short%></a>
+          </td>
+          <td>
+            <%=short.clicks%>
+          </td>
+        </tr>
+        <%}) %>
+
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>
